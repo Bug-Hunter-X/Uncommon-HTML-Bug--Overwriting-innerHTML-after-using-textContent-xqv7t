@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to modify content that has already been modified by other methods
+    document.getElementById("myDiv").textContent = "This is new text.";
+    document.getElementById("myDiv").innerHTML = "This text overwrites the previous text.";
+  </script>
+</body>
+</html>
