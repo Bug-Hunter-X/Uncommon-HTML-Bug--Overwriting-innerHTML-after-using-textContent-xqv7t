@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correctly using insertAdjacentHTML to append new text without overwriting existing content
+    const myDiv = document.getElementById("myDiv");
+    myDiv.textContent = "This is new text.";
+    myDiv.insertAdjacentHTML('beforeend', '<br>This text is appended without overwriting the previous text.');
+  </script>
+</body>
+</html>
